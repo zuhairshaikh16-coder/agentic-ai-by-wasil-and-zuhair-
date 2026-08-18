@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <!-- =====================================================
+         BASIC PAGE INFORMATION
+         ===================================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Agentic AI</title>
+
+
+    <!-- =====================================================
+         WEBSITE CSS
+         ===================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="/static/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         APPLICATION
+         ===================================================== -->
+
+    <div class="app">
+
+
+        <!-- =================================================
+             SIDEBAR
+             ================================================= -->
+
+        <aside class="sidebar">
+
+
+            <!-- Logo -->
+
+            <div class="brand">
+
+                <div class="brand-icon">
+                    🤖
+                </div>
+
+                <div>
+
+                    <div class="brand-name">
+                        ZUHAIR & WASIL
+                    </div>
+
+                    <div class="brand-subtitle">
+                        ZW Ai Agent
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- New Chat -->
+
+            <button
+                id="newChatButton"
+                class="new-chat-button"
+            >
+
+                <span>＋</span>
+
+                New Chat
+
+            </button>
+
+
+            <!-- Tools -->
+
+            <div class="sidebar-section">
+
+                <div class="section-title">
+                    AGENT TOOLS
+                </div>
+
+
+                <div class="tool-item">
+
+                    <div class="tool-icon">
+                        🧮
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Calculator
+                        </strong>
+
+                        <small>
+                            Mathematical calculations
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="tool-item">
+
+                    <div class="tool-icon">
+                        🕐
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Current Time
+                        </strong>
+
+                        <small>
+                            Date and time
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="tool-item">
+
+                    <div class="tool-icon">
+                        📝
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Word Counter
+                        </strong>
+
+                        <small>
+                            Words and characters
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Agent information -->
+
+            <div class="sidebar-info">
+
+                <div class="info-title">
+                    HOW IT WORKS
+                </div>
+
+                <p>
+                    The AI decides when it needs
+                    a tool, uses it, observes the
+                    result, and then produces an
+                    answer.
+                </p>
+
+            </div>
+
+
+            <!-- Footer -->
+
+            <div class="sidebar-footer">
+
+                Agentic AI v1.0
+
+            </div>
+
+
+        </aside>
+
+
+
+        <!-- =================================================
+             MAIN CONTENT
+             ================================================= -->
+
+        <main class="main">
+
+
+            <!-- =================================================
+                 HEADER
+                 ================================================= -->
+
+            <header class="header">
+
+
+                <div class="header-left">
+
+                    <div class="mobile-brand">
+                        🤖
+                    </div>
+
+                    <div>
+
+                        <h1>
+                           ZW AI Assistant
+                        </h1>
+
+                        <p>
+                            Your agentic AI assistant
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="status">
+
+                    <span class="status-dot"></span>
+
+                    <span>
+                        Online
+                    </span>
+
+                </div>
+
+
+            </header>
+
+
+
+            <!-- =================================================
+                 CHAT AREA
+                 ================================================= -->
+
+            <section
+                id="chatMessages"
+                class="chat-messages"
+            >
+
+
+                <!-- Welcome screen -->
+
+                <div
+                    id="welcomeScreen"
+                    class="welcome"
+                >
+
+
+                    <div class="welcome-icon">
+                        🤖
+                    </div>
+
+
+                    <h2>
+                        How can I help you?
+                    </h2>
+
+
+                    <p>
+                        I'm an agentic AI that can
+                        reason, use tools, and work
+                        toward your request.
+                    </p>
+
+
+                    <!-- Suggestions -->
+
+                    <div class="suggestions">
+
+
+                        <button
+                            class="suggestion"
+                            data-message="Calculate 125 * 48"
+                        >
+
+                            <span>
+                                🧮
+                            </span>
+
+                            <div>
+
+                                <strong>
+                                    Calculate
+                                </strong>
+
+                                <small>
+                                    Try 125 × 48
+                                </small>
+
+                            </div>
+
+                        </button>
+
+
+                        <button
+                            class="suggestion"
+                            data-message="What is the current time?"
+                        >
+
+                            <span>
+                                🕐
+                            </span>
+
+                            <div>
+
+                                <strong>
+                                    Current time
+                                </strong>
+
+                                <small>
+                                    Ask for the time
+                                </small>
+
+                            </div>
+
+                        </button>
+
+
+                        <button
+                            class="suggestion"
+                            data-message="Count the words in: Artificial intelligence is changing the world"
+                        >
+
+                            <span>
+                                📝
+                            </span>
+
+                            <div>
+
+                                <strong>
+                                    Word counter
+                                </strong>
+
+                                <small>
+                                    Count words
+                                </small>
+
+                            </div>
+
+                        </button>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- =================================================
+                 INPUT AREA
+                 ================================================= -->
+
+            <footer class="input-area">
+
+
+                <div class="input-wrapper">
+
+
+                    <textarea
+                        id="messageInput"
+                        placeholder="Message your AI agent..."
+                        rows="1"
+                    ></textarea>
+
+
+                    <button
+                        id="sendButton"
+                        class="send-button"
+                        title="Send message"
+                    >
+
+                        ➤
+
+                    </button>
+
+
+                </div>
+
+
+                <div class="input-note">
+
+                    Press Enter to send ·
+                    Shift + Enter for a new line
+
+                </div>
+
+
+            </footer>
+
+
+        </main>
+
+
+    </div>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+         ===================================================== -->
+
+    <script
+        src="/static/script.js"
+    ></script>
+
+
+</body>
+
+</html>
