@@ -11,7 +11,7 @@ API_KEY = os.getenv(
 )
 
 
-MODEL = "YOUR_CURRENT_MODEL"
+MODEL = "openai/gpt-4o-mini"
 
 MAX_TOKENS = 1000
 
