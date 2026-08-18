@@ -6,10 +6,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 
-API_KEY = os.getenv(
-    "OPENROUTER_API_KEY"
-)
-
+API_KEY = os.getenv("OPENROUTER_API_KEY")
 
 MODEL = "openai/gpt-4o-mini"
 MAX_TOKENS = 1000
